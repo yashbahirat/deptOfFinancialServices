@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision & Mission - Department of Financial Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .vision-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .vision-bg::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: movePattern 20s linear infinite;
+        }
+        @keyframes movePattern {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        .mission-item {
+            transform: translateX(-20px);
+            opacity: 0;
+            animation: slideIn 0.5s ease forwards;
+        }
+        .mission-item:nth-child(1) { animation-delay: 0.1s; }
+        .mission-item:nth-child(2) { animation-delay: 0.2s; }
+        .mission-item:nth-child(3) { animation-delay: 0.3s; }
+        .mission-item:nth-child(4) { animation-delay: 0.4s; }
+        .mission-item:nth-child(5) { animation-delay: 0.5s; }
+        
+        @keyframes slideIn {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+    <!-- Include header from index.html -->
+    <div id="header-placeholder"></div>
+    
+    <main id="main-content" class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="mb-6" aria-label="Breadcrumb">
+            <ol class="flex space-x-2 text-sm">
+                <li><a href="index.html" class="text-blue-600 hover:underline">Home</a></li>
+                <li class="text-gray-500">/</li>
+                <li><a href="who-we-are.html" class="text-blue-600 hover:underline">Who We Are</a></li>
+                <li class="text-gray-500">/</li>
+                <li class="text-gray-600">Vision & Mission</li>
+            </ol>
+        </nav>
+
+        <!-- Vision Section -->
+        <section class="vision-bg text-white rounded-lg p-12 mb-8 relative">
+            <div class="relative z-10">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-eye text-5xl mr-6"></i>
+                    <h1 class="text-4xl font-bold">Our Vision</h1>
+                </div>
+                <p class="text-2xl leading-relaxed max-w-4xl">
+                    To build a financially inclusive society where every citizen has access to formal 
+                    financial services, enabling them to participate in and benefit from India's economic growth, 
+                    while ensuring the stability and efficiency of the financial system.
+                </p>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="bg-white rounded-lg shadow p-8 mb-8">
+            <div class="flex items-center mb-8">
+                <i class="fas fa-bullseye text-4xl text-red-600 mr-4"></i>
+                <h2 class="text-3xl font-bold">Our Mission</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="mission-item">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4 flex-shrink-0">
+                            <i class="fas fa-university text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2">Universal Financial Access</h3>
+                            <p class="text-gray-700">
+                                Ensure every Indian has access to basic banking services through innovative 
+                                delivery channels and technology-driven solutions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-item">
+                    <div class="flex items-start">
+                        <div class="bg-green-100 p-3 rounded-full mr-4 flex-shrink-0">
+                            <i class="fas fa-shield-alt text-green-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2">Strengthen Financial Institutions</h3>
+                            <p class="text-gray-700">
+                                Build robust banks and insurance companies that can support India's economic 
+                                aspirations while maintaining financial stability.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-item">
+                    <div class="flex items-start">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4 flex-shrink-0">
+                            <i class="fas fa-laptop-code text-purple-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2">Digital Transformation</h3>
+                            <p class="text-gray-700">
+                                Promote digital banking and fintech innovations to make financial services 
+                                more accessible, efficient, and secure.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-item">
+                    <div class="flex items-start">
+                        <div class="bg-orange-100 p-3 rounded-full mr-4 flex-shrink-0">
+                            <i class="fas fa-graduation-cap text-orange-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2">Financial Literacy</h3>
+                            <p class="text-gray-700">
+                                Enhance financial awareness and literacy to empower citizens to make informed 
+                                financial decisions and protect their interests.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-item">
+                    <div class="flex items-start">
+                        <div class="bg-red-100 p-3 rounded-full mr-4 flex-shrink-0">
+                            <i class="fas fa-users text-red-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2">Consumer Protection</h3>
+                            <p class="text-gray-700">
+                                Safeguard consumer interests through robust grievance redressal mechanisms 
+                                and fair practices in financial services.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-item">
+                    <div class="flex items-start">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4 flex-shrink-0">
+                            <i class="fas fa-chart-line text-indigo-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2">Sustainable Growth</h3>
+                            <p class="text-gray-700">
+                                Foster sustainable and inclusive economic growth by channeling credit to 
+                                productive sectors and supporting entrepreneurship.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic Objectives -->
+        <section class="bg-gray-50 rounded-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold mb-6 text-center">Strategic Objectives 2025-2030</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-lg transition-shadow">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">100%</div>
+                    <h3 class="font-semibold mb-2">Financial Inclusion</h3>
+                    <p class="text-gray-600 text-sm">Achieve 100% adult population with bank accounts</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-lg transition-shadow">
+                    <div class="text-4xl font-bold text-green-600 mb-2">₹5L Cr</div>
+                    <h3 class="font-semibold mb-2">MSME Credit</h3>
+                    <p class="text-gray-600 text-sm">Enable ₹5 lakh crore credit flow to MSMEs</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-lg transition-shadow">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">95%</div>
+                    <h3 class="font-semibold mb-2">Digital Transactions</h3>
+                    <p class="text-gray-600 text-sm">Achieve 95% digital transaction share</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-lg transition-shadow">
+                    <div class="text-4xl font-bold text-orange-600 mb-2">10%</div>
+                    <h3 class="font-semibold mb-2">Insurance Penetration</h3>
+                    <p class="text-gray-600 text-sm">Increase insurance penetration to 10%</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-lg transition-shadow">
+                    <div class="text-4xl font-bold text-red-600 mb-2">50%</div>
+                    <h3 class="font-semibold mb-2">Women Account Holders</h3>
+                    <p class="text-gray-600 text-sm">50% of new accounts by women entrepreneurs</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-lg transition-shadow">
+                    <div class="text-4xl font-bold text-indigo-600 mb-2">Zero</div>
+                    <h3 class="font-semibold mb-2">Cyber Frauds</h3>
+                    <p class="text-gray-600 text-sm">Zero tolerancefor cyber frauds with robust security</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guiding Principles -->
+        <section class="bg-white rounded-lg shadow p-8">
+            <h2 class="text-3xl font-bold mb-6 text-center">Our Guiding Principles</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6">
+                    <div class="flex items-center p-4 bg-blue-50 rounded-lg">
+                        <i class="fas fa-balance-scale text-3xl text-blue-600 mr-4"></i>
+                        <div>
+                            <h3 class="font-semibold">Transparency & Accountability</h3>
+                            <p class="text-gray-600">Maintain highest standards of transparency in all operations</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 bg-green-50 rounded-lg">
+                        <i class="fas fa-handshake text-3xl text-green-600 mr-4"></i>
+                        <div>
+                            <h3 class="font-semibold">Stakeholder Collaboration</h3>
+                            <p class="text-gray-600">Work collaboratively with all stakeholders for common goals</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 bg-purple-50 rounded-lg">
+                        <i class="fas fa-rocket text-3xl text-purple-600 mr-4"></i>
+                        <div>
+                            <h3 class="font-semibold">Innovation & Adaptability</h3>
+                            <p class="text-gray-600">Embrace change and innovation to stay ahead of challenges</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 bg-orange-50 rounded-lg">
+                        <i class="fas fa-heart text-3xl text-orange-600 mr-4"></i>
+                        <div>
+                            <h3 class="font-semibold">Customer Centricity</h3>
+                            <p class="text-gray-600">Place citizen needs at the heart of all policy decisions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include footer from index.html -->
+    <div id="footer-placeholder"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>

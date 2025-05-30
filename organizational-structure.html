@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizational Structure - Department of Financial Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .org-tree {
+            position: relative;
+            padding: 20px 0;
+        }
+        .org-tree ul {
+            position: relative;
+            padding: 20px 0;
+        }
+        .org-tree li {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            list-style-type: none;
+            padding: 20px 5px 0 5px;
+        }
+        .org-tree li::before,
+        .org-tree li::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 2px solid #ccc;
+            width: 50%;
+            height: 20px;
+        }
+        .org-tree li::after {
+            right: auto;
+            left: 50%;
+            border-left: 2px solid #ccc;
+        }
+        .org-tree li:only-child::after,
+        .org-tree li:only-child::before {
+            display: none;
+        }
+        .org-tree li:only-child {
+            padding-top: 0;
+        }
+        .org-tree li:first-child::before,
+        .org-tree li:last-child::after {
+            border: 0 none;
+        }
+        .org-tree li:last-child::before {
+            border-right: 2px solid #ccc;
+            border-radius: 0 5px 0 0;
+        }
+        .org-tree li:first-child::after {
+            border-radius: 5px 0 0 0;
+        }
+        .org-tree ul ul::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-left: 2px solid #ccc;
+            width: 0;
+            height: 20px;
+        }
+        .org-box {
+            border: 2px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+            background: white;
+            display: inline-block;
+            transition: all 0.3s;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .org-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-color: #3b82f6;
+        }
+        .level-1 { background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; }
+        .level-2 { background: linear-gradient(135deg, #10b981, #059669); color: white; }
+        .level-3 { background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; }
+        .level-4 { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+    <!-- Include header from index.html -->
+    <div id="header-placeholder"></div>
+    
+    <main id="main-content" class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <nav class="mb-6" aria-label="Breadcrumb">
+            <ol class="flex space-x-2 text-sm">
+                <li><a href="index.html" class="text-blue-600 hover:underline">Home</a></li>
+                <li class="text-gray-500">/</li>
+                <li><a href="who-we-are.html" class="text-blue-600 hover:underline">Who We Are</a></li>
+                <li class="text-gray-500">/</li>
+                <li class="text-gray-600">Organizational Structure</li>
+            </ol>
+        </nav>
+
+        <!-- Page Header -->
+        <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-lg p-8 mb-8">
+            <h1 class="text-4xl font-bold mb-4">Organizational Structure</h1>
+            <p class="text-xl">Hierarchical structure of Department of Financial Services</p>
+        </section>
+
+        <!-- Organization Chart -->
+        <section class="bg-white rounded-lg shadow p-8 mb-8 overflow-x-auto">
+            <div class="org-tree">
+                <ul>
+                    <li>
+                        <div class="org-box level-1">
+                            <i class="fas fa-user-tie text-3xl mb-2"></i>
+                            <h3 class="font-bold">Finance Minister</h3>
+                            <p class="text-sm">Smt. Nirmala Sitharaman</p>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="org-box level-2">
+                                    <i class="fas fa-user-tie text-2xl mb-2"></i>
+                                    <h4 class="font-semibold">Minister of State</h4>
+                                    <p class="text-sm">Shri Pankaj Chaudhary</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="org-box level-2">
+                                    <i class="fas fa-user-tie text-2xl mb-2"></i>
+                                    <h4 class="font-semibold">Minister of State</h4>
+                                    <p class="text-sm">Dr. Bhagwat Karad</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="org-box level-3">
+                                    <i class="fas fa-user text-2xl mb-2"></i>
+                                    <h4 class="font-semibold">Secretary (FS)</h4>
+                                    <p class="text-sm">Shri Vivek Joshi</p>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="org-box level-4">
+                                            <h5 class="font-semibold">AS (Banking)</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="org-box level-4">
+                                            <h5 class="font-semibold">JS (Insurance)</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="org-box level-4">
+                                            <h5 class="font-semibold">JS (FI)</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="org-box level-4">
+                                            <h5 class="font-semibold">JS (Digital)</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="org-box level-4">
+                                            <h5 class="font-semibold">Economic Adviser</h5>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Detailed Structure -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <!-- Banking Divisions -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-2xl font-bold mb-4 text-blue-600">
+                    <i class="fas fa-university mr-2"></i>Banking Divisions
+                </h2>
+                <div class="space-y-4">
+                    <div class="border-l-4 border-blue-500 pl-4">
+                        <h3 class="font-semibold">Banking Division - I</h3>
+                        <p class="text-sm text-gray-600">Led by: Additional Secretary</p>
+                        <ul class="text-sm mt-2 space-y-1">
+                            <li>• Public Sector Banks Policy</li>
+                            <li>• Capital Adequacy & Restructuring</li>
+                            <li>• Board Level Appointments</li>
+                            <li>• Performance Monitoring</li>
+                        </ul>
+                    </div>
+                    <div class="border-l-4 border-blue-500 pl-4">
+                        <h3 class="font-semibold">Banking Division - II</h3>
+                        <p class="text-sm text-gray-600">Led by: Joint Secretary</p>
+                        <ul class="text-sm mt-2 space-y-1">
+                            <li>• Regional Rural Banks</li>
+                            <li>• Cooperative Banks</li>
+                            <li>• NABARD Coordination</li>
+                            <li>• Priority Sector Lending</li>
+                        </ul>
+                    </div>
+                    <div class="border-l-4 border-blue-500 pl-4">
+                        <h3 class="font-semibold">Banking Division - III</h3>
+                        <p class="text-sm text-gray-600">Led by: Joint Secretary</p>
+                        <ul class="text-sm mt-2 space-y-1">
+                            <li>• Private Banks Oversight</li>
+                            <li>• Foreign Banks</li>
+                            <li>• Banking Regulations</li>
+                            <li>• RBI Coordination</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Insurance & Pension Divisions -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-2xl font-bold mb-4 text-green-600">
+                    <i class="fas fa-shield-alt mr-2"></i>Insurance & Pension
+                </h2>
+                <div class="space-y-4">
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <h3 class="font-semibold">Insurance Division - I</h3>
+                        <p class="text-sm text-gray-600">Led by: Joint Secretary</p>
+                        <ul class="text-sm mt-2 space-y-1">
+                            <li>• Life Insurance Policy</li>
+                            <li>• LIC Monitoring</li>
+                            <li>• Insurance Penetration</li>
+                            <li>• IRDAI Coordination</li></ul>
+                    </div>
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <h3 class="font-semibold">Insurance Division - II</h3>
+                        <p class="text-sm text-gray-600">Led by: Director</p>
+                        <ul class="text-sm mt-2 space-y-1">
+                            <li>• General Insurance</li>
+                            <li>• Health Insurance</li>
+                            <li>• Crop Insurance</li>
+                            <li>• Motor Insurance</li>
+                        </ul>
+                    </div>
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <h3 class="font-semibold">Pension Division</h3>
+                        <p class="text-sm text-gray-600">Led by: Joint Secretary</p>
+                        <ul class="text-sm mt-2 space-y-1">
+                            <li>• National Pension System</li>
+                            <li>• Atal Pension Yojana</li>
+                            <li>• PFRDA Coordination</li>
+                            <li>• Pension Reforms</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financial Inclusion & Digital -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-2xl font-bold mb-4 text-purple-600">
+                    <i class="fas fa-hand-holding-usd mr-2"></i>Financial Inclusion
+                </h2>
+                <div class="space-y-4">
+                    <div class="border-l-4 border-purple-500 pl-4">
+                        <h3 class="font-semibold">FI Division</h3>
+                        <p class="text-sm text-gray-600">Led by: Joint Secretary</p>
+                        <ul class="text-sm mt-2 space-y-1">
+                            <li>• Jan Dhan Yojana</li>
+                            <li>• Direct Benefit Transfer</li>
+                            <li>• Financial Literacy</li>
+                            <li>• BC/BF Network</li>
+                        </ul>
+                    </div>
+                    <div class="border-l-4 border-purple-500 pl-4">
+                        <h3 class="font-semibold">Credit Division</h3>
+                        <p class="text-sm text-gray-600">Led by: Director</p>
+                        <ul class="text-sm mt-2 space-y-1">
+                            <li>• MUDRA Yojana</li>
+                            <li>• Stand Up India</li>
+                            <li>• MSME Credit</li>
+                            <li>• Credit Guarantee</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Digital & IT -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-2xl font-bold mb-4 text-orange-600">
+                    <i class="fas fa-laptop-code mr-2"></i>Digital & IT
+                </h2>
+                <div class="space-y-4">
+                    <div class="border-l-4 border-orange-500 pl-4">
+                        <h3 class="font-semibold">Digital Banking</h3>
+                        <p class="text-sm text-gray-600">Led by: Joint Secretary</p>
+                        <ul class="text-sm mt-2 space-y-1">
+                            <li>• Digital Banking Units</li>
+                            <li>• Cyber Security</li>
+                            <li>• Fintech Policy</li>
+                            <li>• Digital Payments</li>
+                        </ul>
+                    </div>
+                    <div class="border-l-4 border-orange-500 pl-4">
+                        <h3 class="font-semibold">IT Division</h3>
+                        <p class="text-sm text-gray-600">Led by: Director (IT)</p>
+                        <ul class="text-sm mt-2 space-y-1">
+                            <li>• IT Infrastructure</li>
+                            <li>• MIS & Analytics</li>
+                            <li>• Website Management</li>
+                            <li>• Data Security</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Functions -->
+        <section class="bg-gray-50 rounded-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold mb-6 text-center">Support Functions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <i class="fas fa-chart-line text-4xl text-indigo-600 mb-3"></i>
+                    <h3 class="font-semibold mb-2">Economic Division</h3>
+                    <p class="text-sm text-gray-600">Economic analysis, research, and policy inputs</p>
+                    <p class="text-sm mt-2"><strong>Head:</strong> Economic Adviser</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <i class="fas fa-gavel text-4xl text-red-600 mb-3"></i>
+                    <h3 class="font-semibold mb-2">Legal & Vigilance</h3>
+                    <p class="text-sm text-gray-600">Legal matters, RTI, vigilance cases</p>
+                    <p class="text-sm mt-2"><strong>Head:</strong> Director (Legal)</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <i class="fas fa-users-cog text-4xl text-green-600 mb-3"></i>
+                    <h3 class="font-semibold mb-2">Administration</h3>
+                    <p class="text-sm text-gray-600">HR, establishment, general administration</p>
+                    <p class="text-sm mt-2"><strong>Head:</strong> Director (Admin)</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <i class="fas fa-language text-4xl text-purple-600 mb-3"></i>
+                    <h3 class="font-semibold mb-2">Official Language</h3>
+                    <p class="text-sm text-gray-600">Hindi implementation and translation</p>
+                    <p class="text-sm mt-2"><strong>Head:</strong> Director (OL)</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <i class="fas fa-coins text-4xl text-yellow-600 mb-3"></i>
+                    <h3 class="font-semibold mb-2">Budget & Accounts</h3>
+                    <p class="text-sm text-gray-600">Budget planning and financial management</p>
+                    <p class="text-sm mt-2"><strong>Head:</strong> Director (Budget)</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <i class="fas fa-comments text-4xl text-blue-600 mb-3"></i>
+                    <h3 class="font-semibold mb-2">Public Grievances</h3>
+                    <p class="text-sm text-gray-600">Citizen grievances and public interface</p>
+                    <p class="text-sm mt-2"><strong>Head:</strong> Director (PG)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attached/Subordinate Offices -->
+        <section class="bg-white rounded-lg shadow p-8">
+            <h2 class="text-2xl font-bold mb-6">Attached & Subordinate Offices</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="border rounded-lg p-4 hover:shadow-lg transition-shadow">
+                    <h3 class="font-semibold mb-2">Banks Board Bureau</h3>
+                    <p class="text-sm text-gray-600">Recommends appointments for PSB boards</p>
+                    <a href="#" class="text-blue-600 text-sm hover:underline mt-2 inline-block">Visit Website →</a>
+                </div>
+                <div class="border rounded-lg p-4 hover:shadow-lg transition-shadow">
+                    <h3 class="font-semibold mb-2">National Centre for Financial Education</h3>
+                    <p class="text-sm text-gray-600">Promotes financial literacy across India</p>
+                    <a href="#" class="text-blue-600 text-sm hover:underline mt-2 inline-block">Visit Website →</a>
+                </div>
+                <div class="border rounded-lg p-4 hover:shadow-lg transition-shadow">
+                    <h3 class="font-semibold mb-2">Banking Codes and Standards Board</h3>
+                    <p class="text-sm text-gray-600">Sets standards for banking practices</p>
+                    <a href="#" class="text-blue-600 text-sm hover:underline mt-2 inline-block">Visit Website →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section class="mt-8 text-center">
+            <a href="downloads/org-chart.pdf" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 inline-flex items-center">
+                <i class="fas fa-download mr-2"></i>Download Complete Organization Chart (PDF)
+            </a>
+        </section>
+    </main>
+
+    <!-- Include footer from index.html -->
+    <div id="footer-placeholder"></div>
+
+    <script src="index.js"></script>
+    <script>
+        // Interactive org chart functionality
+        document.querySelectorAll('.org-box').forEach(box => {
+            box.addEventListener('click', function() {
+                // Add click functionality if needed
+                console.log('Clicked:', this.querySelector('h3, h4, h5').textContent);
+            });
+        });
+    </script>
+</body>
+</html>
